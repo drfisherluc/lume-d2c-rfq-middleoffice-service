@@ -14,6 +14,6 @@ public class RuleDefinition {
 //    private long id;
 
     @Indexed(unique = true)
-    private String segment;
+    private String sector;
     private  List<Rule> ruleSet;
 }

@@ -11,5 +11,6 @@ public class Rule {
     @Indexed(unique = true)
     private String ruleID;
     private int orderOfPrecedence;
+    private RuleAction ruleAction;
     private List<Predicate> predicateSet;
 }

@@ -16,8 +16,8 @@ public class RulesController {
     @Autowired
     RulesService rs;
 
-    @GetMapping("/rules")
-    public List<RuleDefinition> getRules(@RequestParam(value = "segment", defaultValue = "ALL") String segment) {
+    @GetMapping("/wholerules")
+    public List<RuleDefinition> getRules(@RequestParam(value = "sector", defaultValue = "ALL") String segment) {
         if (segment.equals("ALL"))
             return rs.getRules();
         else
