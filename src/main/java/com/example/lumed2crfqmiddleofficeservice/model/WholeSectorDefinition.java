@@ -8,8 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
 @Data
-@Document(collection = "rules")
-public class RuleDefinition {
+@Document(collection = "wholerules")
+public class WholeSectorDefinition {
 //    @Id
 //    private long id;
 

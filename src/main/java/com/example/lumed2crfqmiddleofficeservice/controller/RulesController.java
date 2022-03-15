@@ -1,7 +1,7 @@
-package com.example.lumed2crfqmiddleofficeservice;
+package com.example.lumed2crfqmiddleofficeservice.controller;
 
 
-import com.example.lumed2crfqmiddleofficeservice.model.RuleDefinition;
+import com.example.lumed2crfqmiddleofficeservice.model.WholeSectorDefinition;
 import com.example.lumed2crfqmiddleofficeservice.service.RulesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +17,11 @@ public class RulesController {
     RulesService rs;
 
     @GetMapping("/wholerules")
-    public List<RuleDefinition> getRules(@RequestParam(value = "sector", defaultValue = "ALL") String segment) {
-        if (segment.equals("ALL"))
-            return rs.getRules();
+    public List<WholeSectorDefinition> getRules(@RequestParam(value = "sector", defaultValue = "ALL") String sector) {
+        if (sector.equals("ALL"))
+            return rs.getWholeRules();
         else
-            return rs.getRules(segment);
+            return rs.getWholeRules(sector);
     }
 
 
