@@ -22,7 +22,7 @@ public class RulesController {
     @GetMapping("/wholerules")
     public ResponseEntity<String> getRules(@RequestParam(value = "sector", defaultValue = "ALL") String sector) {
         try {
-            List<WholeSectorDefinition> wholeSectorDefinitionList = null;
+            List<WholeSectorDefinition> wholeSectorDefinitionList;
             if (sector.equals("ALL"))
                 wholeSectorDefinitionList =  rs.getWholeRules();
             else
